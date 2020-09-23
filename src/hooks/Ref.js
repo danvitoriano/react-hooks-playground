@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import Button from "../components/Button";
 
 export default () => {
-    const [value, setValue] = useState('UOL')
+    const [value, setValue] = useState('Hello World')
 
     function handleChange() {
         setValue(inputRef.current.value)
@@ -14,9 +14,9 @@ export default () => {
 
     return (
         <>
-            <div>
-                Valor alterado = {value}
-                <input type="text" ref={inputRef} />
+            <div className="form-group">
+                Valor alterado: {value}
+                <input type="text" ref={inputRef} className="form-control" aria-describedby="refInput" />
                 <Button onClick={handleChange}>Trocar</Button>
             </div>
         </>

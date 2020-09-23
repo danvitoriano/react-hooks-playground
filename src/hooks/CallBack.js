@@ -22,9 +22,9 @@ export default () => {
   return (
     <>
       <Counter value={value} />
-      <Button onClick={handleClick}>Contar</Button>
-      <Button onClick={handleStep}>Passo {step}</Button>
-      <div>Total Function = {list.length}</div>
+      <Button onClick={handleClick}>Count</Button>
+      <Button onClick={handleStep}>Step {step}</Button>
+      <div>Total Function: {list.length}</div>
     </>
   );
 }

@@ -21,7 +21,7 @@ export default props => {
 
     return (
         <div>
-            Effect1: {props.value}
+            Valor: {props.value}
             <div>
                 <Counter value={counter1} />
                 <Button onClick={handleCounter1}>Counter 1</Button>
