@@ -1,27 +1,30 @@
 import React from "react";
-import "./styles.css";
-import CallBack from "./hooks/CallBack";
 import Title from "./components/Title";
+import Jumbotron from "./components/Jumbotron";
+import CallBack from "./hooks/CallBack";
 import State from "./hooks/State";
+import Effect from "./hooks/Effect";
+import Reducer from "./hooks/Reducer";
+import Context from "./hooks/Context";
+import Ref from "./hooks/Ref";
+import ForwardRef from "./hooks/ForwardRef";
+import LayoutEffect from "./hooks/LayoutEffect";
+import Custom from "./hooks/Custom";
 
-const titles = {
-  callBack: "CallBack",
-  state: "State",
-}
-
-export default function App() {
+export default () => {
   return (
     <div className="container">
-      <div className="jumbotron">
-        <h1>React Hooks Playground</h1>
-        <p className="lead">Atualize pequenos elementos da tela com os React Hooks (ganchos).</p>
-        <hr className="my-4" />
-        <p>Teste com <strong>CodeSandBox</strong> ou faça <i>fork</i> do repositório para o seu GitHub. Pull Requests são bem-vindas!</p>
-        <a className="btn btn-primary btn-lg" href="http://reactjs.org" role="button">Saiba mais sobre Hooks</a>
-      </div>
-      <div className="d-flex flex-row">
-        <Title title={titles.callBack} comp={<CallBack />} />
-        <Title title={titles.state} comp={<State />} />
+      <Jumbotron />
+      <div className="d-flex flex-row flex-wrap">
+        <Title title="CallBack" comp={<CallBack />} />
+        <Title title="State" comp={<State />} />
+        <Title title="Effect" comp={<Effect value="1" />} />
+        <Title title="Reducer" comp={<Reducer />} />
+        <Title title="Context" comp={<Context />} />
+        <Title title="Ref" comp={<Ref />} />
+        <Title title="ForwardRef" comp={<ForwardRef />} />
+        <Title title="LayoutEffect" comp={<LayoutEffect />} />
+        <Title title="Custom" comp={<Custom />} />
       </div>
     </div>
   );
