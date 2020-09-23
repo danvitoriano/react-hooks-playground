@@ -3,9 +3,9 @@ import { useState, useCallback } from "react";
 import Button from "../components/Button";
 import Counter from "../components/Counter";
 
-const functions = new Set();
+const list = [];
 
-export default function App() {
+export default () => {
   const [value, setValue] = useState(0);
   const [step, setStep] = useState(1);
 
@@ -17,14 +17,14 @@ export default function App() {
     setStep((prev) => prev + 1);
   }
 
-  functions.add(handleClick);
+  list.push(handleClick);
 
   return (
     <>
       <Counter value={value} />
       <Button onClick={handleClick}>Contar</Button>
       <Button onClick={handleStep}>Passo {step}</Button>
-      <div>Total Function = {functions.size}</div>
+      <div>Total Function = {list.length}</div>
     </>
   );
 }
