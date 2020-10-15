@@ -19,7 +19,7 @@ import StateEffectFetch from "./hooks/StateEffectFetch";
 import StateToggle from "./hooks/StateToggle";
 import Effect3 from "./hooks/Effect3";
 
-const effect = props => alert(props)
+const effect = props => console.info("side effects props: ", props)
 
 export default () => {
   return (
